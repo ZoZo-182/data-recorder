@@ -54,9 +54,17 @@ typedef struct
     uint8 ErrCounter;
 
     /*
+    ** data_recorder specific data
+    */
+    uint32 SampleCount; // yeah have you seen photoresistor data? or maybe im thinking of ultrasonic sensor?
+    uint32 LastSample;
+    bool LoggingEnabled;
+
+    /*
     ** Housekeeping telemetry packet...
     */
     SAMPLE_APP_HkTlm_t HkTlm;
+
 
     /*
     ** Run Status variable used in the main processing loop
